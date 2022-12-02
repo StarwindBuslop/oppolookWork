@@ -1,7 +1,7 @@
 package com.testAssigment.demoX.controller;
 
-import com.testAssigment.demoX.model.Student;
-import com.testAssigment.demoX.service.StudentService;
+import com.testAssigment.demoX.model.UserLog;
+import com.testAssigment.demoX.service.UserLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,18 +9,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/student")
-public class StudentController {
+public class UserLogController {
     @Autowired
-    private StudentService studentService;
+    private UserLogService userLogService;
 
     @PostMapping("/add")
-    public String add(@RequestBody Student student){
-        studentService.saveStudent(student);
-        return "new student is added";
+    public String add(@RequestBody UserLog userLog){
+        userLogService.saveStudent(userLog);
+        return "new userLog is added";
     }
     @GetMapping("/students")
-    public List<Student> getAll(){
-        return studentService.getAllStudents();
+    public List<UserLog> getAll(){
+        return userLogService.getAllStudents();
 
     }
     @RequestMapping(value="/welcome",method = RequestMethod.GET)

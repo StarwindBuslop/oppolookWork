@@ -11,11 +11,8 @@ public class Opportunity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idOpportunity;
 
-    //@ManyToMany(mappedBy = "opportunities")
-    private List<
-            //Contact
-            String
-            > contactList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idContact")
+    private List<Contact> contactList;
 
     public Opportunity() {
     }
@@ -28,22 +25,11 @@ public class Opportunity {
         this.idOpportunity = idOpportunity;
     }
 
-    public List<String> getContactList() {
+    public List<Contact> getContactList() {
         return contactList;
     }
 
-    public void setContactList(List<String> contactList) {
+    public void setContactList(List<Contact> contactList) {
         this.contactList = contactList;
     }
-
-    /**
-     *
-     public List<Contact> getContactList() {
-     return contactList;
-     }
-
-     public void setContactList(List<Contact> contactList) {
-     this.contactList = contactList;
-     }
-     */
 }
