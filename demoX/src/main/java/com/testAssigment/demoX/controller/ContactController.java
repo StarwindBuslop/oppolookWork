@@ -18,7 +18,7 @@ public class ContactController {
         contactService.saveContact(contact);
         return "new contact is added";
     }
-    @GetMapping("contacts")
+    @GetMapping("/contacts")
     public List<Contact> getAll(){
         return contactService.getAllContacts();
     }
