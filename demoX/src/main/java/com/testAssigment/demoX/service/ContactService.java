@@ -1,9 +1,10 @@
 package com.testAssigment.demoX.service;
 
 import com.testAssigment.demoX.model.Contact;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface ContactService {
     public Contact saveContact(Contact c);
 
