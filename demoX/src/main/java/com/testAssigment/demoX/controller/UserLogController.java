@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/student")
+@RequestMapping("/users")
 public class UserLogController {
     @Autowired
     private UserLogService userLogService;
@@ -18,7 +18,7 @@ public class UserLogController {
         userLogService.saveStudent(userLog);
         return "new userLog is added";
     }
-    @GetMapping("/students")
+    @GetMapping("/users")
     public List<UserLog> getAll(){
         return userLogService.getAllStudents();
 
