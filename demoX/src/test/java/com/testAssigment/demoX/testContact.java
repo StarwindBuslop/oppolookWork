@@ -18,4 +18,10 @@ public class testContact {
         //String s =studentController.add(new Student(3,"Pepe2","Ronda"));
         assertEquals("Pepe","contact added");
     }
+    void TestDeleteContact(){
+
+        //StudentController studentController = new StudentController();
+        //String s =studentController.add(new Student(3,"Pepe2","Ronda"));
+        assertEquals("contact is deleted","contact added");
+    }
 }

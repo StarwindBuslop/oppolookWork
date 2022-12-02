@@ -15,25 +15,27 @@ public class Contact {
     private String email;
     private String telephone;
     private Date datecall;
-    @ManyToMany
-    @JoinTable(
-            name = "oppojoin",
-            joinColumns = @JoinColumn(name = "id_contact"),
-            inverseJoinColumns = @JoinColumn(name = "id_opportunity"))
-    private List<Opportunity> opportunites;
+    /**
+     * @ManyToMany
+     *     @JoinTable(
+     *             name = "oppojoin",
+     *             joinColumns = @JoinColumn(name = "id_contact"),
+     *             inverseJoinColumns = @JoinColumn(name = "id_opportunity"))
+     */
+    private List<
+            //Opportunity
+            String
+            > opportunities;
 
-    @ManyToMany
-    @JoinTable(name = "contact_opportunities",
-            joinColumns = @JoinColumn(name = "contact_idContact", referencedColumnName = "opportunities_idOpportunity"))
-    private List<Opportunity> opportunities = new ArrayList<>();
 
-    public List<Opportunity> getOpportunities() {
+    /*public List<Opportunity> getOpportunities() {
         return opportunities;
     }
 
     public void setOpportunities(List<Opportunity> opportunities) {
         this.opportunities = opportunities;
-    }
+    }*/
+
 
     public Contact() {
 
@@ -70,11 +72,11 @@ public class Contact {
         this.datecall = datecall;
     }
 
-    public List<Opportunity> getOpportunites() {
-        return opportunites;
+    public List<String> getOpportunities() {
+        return opportunities;
     }
 
-    public void setOpportunites(List<Opportunity> opportunites) {
-        this.opportunites = opportunites;
+    public void setOpportunities(List<String> opportunities) {
+        this.opportunities = opportunities;
     }
 }

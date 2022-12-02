@@ -11,8 +11,11 @@ public class Opportunity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idOpportunity;
 
-    @ManyToMany(mappedBy = "opportunities")
-    private List<Contact> contactList;
+    //@ManyToMany(mappedBy = "opportunities")
+    private List<
+            //Contact
+            String
+            > contactList;
 
     public Opportunity() {
     }
@@ -25,11 +28,22 @@ public class Opportunity {
         this.idOpportunity = idOpportunity;
     }
 
-    public List<Contact> getContactList() {
+    public List<String> getContactList() {
         return contactList;
     }
 
-    public void setContactList(List<Contact> contactList) {
+    public void setContactList(List<String> contactList) {
         this.contactList = contactList;
     }
+
+    /**
+     *
+     public List<Contact> getContactList() {
+     return contactList;
+     }
+
+     public void setContactList(List<Contact> contactList) {
+     this.contactList = contactList;
+     }
+     */
 }
