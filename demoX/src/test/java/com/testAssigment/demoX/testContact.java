@@ -18,6 +18,7 @@ public class testContact {
         //String s =studentController.add(new Student(3,"Pepe2","Ronda"));
         assertEquals("Pepe","contact added");
     }
+    @Test
     void TestDeleteContact(){
 
         //StudentController studentController = new StudentController();
