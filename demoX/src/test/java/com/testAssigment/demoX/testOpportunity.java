@@ -10,24 +10,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 public class testOpportunity {
     @Test
-    void testCreateContact(){
-
-        ContactController contactController = new ContactController();
-        String s =contactController.addContact(new Contact());
-        assertEquals(s,"contact added");
+    void testCreateOpportunity(){
+        assertEquals(null,"contact added");
     }
     @Test
-    void testDeleteContact(){
+    void testDeleteOpportunity(){
 
-        ContactController contactController = new ContactController();
-        String s =contactController.addContact(new Contact());
-        assertEquals("contact is deleted","contact added");
+        assertEquals("opportunity is deleted","opportunity added");
     }
     @Test
-    void testListContacts(){
+    void testListOpportunities(){
 
-        //ContactController contactController = new ContactController();
-        //String s =contactController.addContact(new Contact());
-        assertEquals("contact is deleted","contact added");
+        assertEquals("opps are listed","contact added");
     }
 }
