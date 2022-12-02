@@ -19,7 +19,7 @@ public class OpportunityController {
         return "new opportunity";
     }
     @GetMapping("/opportunities")
-    public List<Opportunity> getAll(){
+    public List<Opportunity> getAllOpportunities(){
         return opportunityService.getAllOpportunities();
 
     }

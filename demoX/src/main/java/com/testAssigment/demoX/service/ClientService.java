@@ -12,4 +12,5 @@ public interface ClientService {
 
     public List<Client> getAllClients();
     public String deleteClient(Client c);
+    public Client getClient(Integer c);
 }

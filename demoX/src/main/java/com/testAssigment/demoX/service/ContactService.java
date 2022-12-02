@@ -10,4 +10,5 @@ public interface ContactService {
 
     public List<Contact> getAllContacts();
     public String deleteContact(Contact c);
+    Contact getContact(Integer c);
 }

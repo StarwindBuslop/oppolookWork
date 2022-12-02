@@ -19,13 +19,18 @@ public class ClientController {
         return "new contact is added";
     }
     @GetMapping("/clients")
-    public List<Client> getAll()
+    public List<Client> getAllClients()
     {
         return clientService.getAllClients();
     }
     @DeleteMapping("/")
-    public String removeContact(Client c){
+    public String removeClient(Client c){
         clientService.deleteClient(c);
         return "Deleted client";
+    }
+    @GetMapping("/")
+    public Client getClient(@PathVariable Integer id){
+        return clientService.getClient(id);
+
     }
 }

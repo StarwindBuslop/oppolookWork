@@ -28,5 +28,10 @@ public class ContactController {
         contactService.deleteContact(c);
         return "Deleted contact";
     }
+    @GetMapping("/contact/{id}")
+    public Contact getContact(@PathVariable Integer id)
+    {
+        return contactService.getContact(id);
+    }
 
 }

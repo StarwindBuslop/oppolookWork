@@ -26,4 +26,11 @@ public class ContactServiceImpl implements  ContactService{
         contactRepository.delete(c);
         return "Borrado contacto";
     }
+
+    @Override
+    public Contact getContact(Integer c) {
+
+        return contactRepository.getReferenceById(c);
+    }
+
 }

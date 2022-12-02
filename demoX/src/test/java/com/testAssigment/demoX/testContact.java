@@ -1,7 +1,9 @@
 package com.testAssigment.demoX;
 
 
+import com.testAssigment.demoX.controller.ClientController;
 import com.testAssigment.demoX.controller.ContactController;
+import com.testAssigment.demoX.model.Client;
 import com.testAssigment.demoX.model.Contact;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,8 +31,9 @@ public class testContact {
     @Test
     void testListContacts(){
 
-        //ContactController contactController = new ContactController();
-        //String s =contactController.addContact(new Contact());
-        assertEquals("contact is deleted","contact added");
+        ContactController clientController = new ContactController();
+
+        Contact contac = clientController.getContact(2);
+        assertEquals(contac,null);
     }
 }

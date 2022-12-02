@@ -15,12 +15,12 @@ public class UserLogController {
 
     @PostMapping("/add")
     public String add(@RequestBody UserLog userLog){
-        userLogService.saveStudent(userLog);
+        userLogService.saveUser(userLog);
         return "new userLog is added";
     }
     @GetMapping("/users")
     public List<UserLog> getAll(){
-        return userLogService.getAllStudents();
+        return userLogService.getAllUsers();
 
     }
     @RequestMapping(value="/welcome",method = RequestMethod.GET)

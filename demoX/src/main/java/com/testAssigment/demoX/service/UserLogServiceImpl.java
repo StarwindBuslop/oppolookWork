@@ -12,13 +12,13 @@ public class UserLogServiceImpl implements UserLogService {
     @Autowired
     private UserLogRepository userLogRepository;
     @Override
-    public UserLog saveStudent(UserLog d) {
+    public UserLog saveUser(UserLog d) {
 
         return userLogRepository.save(d);
     }
 
     @Override
-    public List<UserLog> getAllStudents() {
+    public List<UserLog> getAllUsers() {
         return userLogRepository.findAll();
     }
 }

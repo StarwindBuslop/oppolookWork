@@ -26,4 +26,9 @@ public class ClientServiceImpl implements ClientService{
     public String deleteClient(Client c) {
         return null;
     }
+    @Override
+    public Client getClient(Integer c) {
+        return clientRepository.getReferenceById(c);
+    }
+
 }
